@@ -13,7 +13,10 @@ class UnmetaClassVisitor(
 
     override fun visitAnnotation(descriptor: String?, visible: Boolean): AnnotationVisitor? {
         return when (descriptor) {
-            "Lkotlin/coroutines/jvm/internal/DebugMetadata;" -> {
+            "Lkotlin/coroutines/jvm/internal/DebugMetadata;",
+            "Lkotlin/jvm/internal/SourceDebugExtension;",
+            "Lkotlin/Metadata;",
+            -> {
                 isModified = true
                 null
             }
