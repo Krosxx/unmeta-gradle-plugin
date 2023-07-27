@@ -1,6 +1,6 @@
 plugins {
     id("com.android.application")
-    id("com.axzae.unmeta")
+    id("com.kros.unmeta")
 }
 
 android {
