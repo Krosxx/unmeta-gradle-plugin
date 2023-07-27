@@ -81,7 +81,7 @@ publishing {
 signing {
     val signingKey = System.getenv("GPG_SIGNING_KEY")
     val signingPassword = System.getenv("GPG_SIGNING_PASSWORD")
-    useInMemoryPgpKeys(signingKey.chunked(64).joinToString("\n"), signingPassword)
+    useInMemoryPgpKeys(signingKey, signingPassword)
     sign(tasks["jar"])
     sign(publishing.publications["mavenJava"])
 }
